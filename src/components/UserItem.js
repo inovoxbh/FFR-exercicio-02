@@ -4,15 +4,17 @@ import { Link } from "react-router-dom";
 export function UserItem(props) {
   return (
     <div>
-      <input
-        type="button"
-        onClick={event => props.remove(props.taskId, event)}
-      />
+      <p>
+        <button
+          type="submit"
+          name="excluir"
+          onClick={event => props.remove(props.nome, event)}
+        >Excluir</button>
 
         {props.nome}
 
-      <Link to={`/users/${props.nome}`}>Detalhes</Link>
-
+        <Link to={`/users/${props.nome}`}>Detalhes</Link>
+      </p>
     </div>
   );
 }
