@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import { UserItem } from "./UserItem";
 
 export class UsersList extends Component {
+  componentDidMount(){
+    document.title = 'Lista de Usuários';
+  }
+
   state = {
     Users: [
       {

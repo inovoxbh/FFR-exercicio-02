@@ -1,3 +1,14 @@
-import React from "react";
+import React, { Component } from "react";
 
-export const DetailsPage = (props) => <h1>Você é o {props.match.params.nome}</h1>;
+export class DetailsPage extends Component {
+    componentDidMount(){
+        document.title = this.props.match.params.nome;
+    }
+    render(){
+        return (
+            <div>
+                <p>Você é o {this.props.match.params.nome}.</p>;
+            </div>
+        )
+    }
+}
